@@ -618,6 +618,7 @@ h3.profession{
     max-width: 25%;
     text-align: center;
     margin-bottom: 60px;
+    margin-left: 70px;
   
 }
 
@@ -645,6 +646,7 @@ h3.profession{
     color: var(--text-black-900);
     font-weight: 700;
     margin: 15px 0 5px;
+    margin-left: 20px;
 }
 
 .contact .contact-info-item p{
@@ -652,6 +654,7 @@ h3.profession{
     line-height: 25px;
     font-weight: 400;
     color: var(--text-black-700);
+    margin-left: 20px;
 }
 
 .contact .contact-form{
