@@ -3,405 +3,376 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/skin/color-1.css" />
+    <meta
+      name="description"
+      content="Portfolio of Fizzah Mukhtar Mirza, Software Engineer specializing in ASP.NET Core, Flutter, AI, Full Stack Development, REST APIs, SQL Server, and modern software solutions."
+    />
+    <title>Fizzah Mukhtar Mirza | Software Engineer | ASP.NET Core | Flutter | AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="css/skin/color-1.css"
-      class="alternate-style"
-      title="color-1"
-      disabled
-    />
-    <link
-      rel="stylesheet"
-      href="css/skin/color-2.css"
-      class="alternate-style"
-      title="color-2"
-      disabled
-    />
-    <link
-      rel="stylesheet"
-      href="css/skin/color-3.css"
-      class="alternate-style"
-      title="color-3"
-      disabled
-    />
-    <link
-      rel="stylesheet"
-      href="css/skin/color-4.css"
-      class="alternate-style"
-      title="color-4"
-      disabled
-    />
-    <link
-      rel="stylesheet"
-      href="css/skin/color-5.css"
-      class="alternate-style"
-      title="color-5"
-      disabled
-    />
-    <link rel="stylesheet" href="css/style-switcher.css" />
-
-
-<script>
-  // Using JavaScript to handle form submission with AJAX
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
-      e.preventDefault(); // Prevent form from submitting normally
-
-      const formData = new FormData(this);
-
-      // AJAX request to send the form data to PHP without reloading the page
-      fetch("submit_form.php", {
-          method: "POST",
-          body: formData,
-      })
-      .then((response) => response.text())
-      .then((data) => {
-          alert("Message sent successfully!");
-      })
-      .catch((error) => {
-          alert("There was a problem submitting the form.");
-      });
-  });
-</script>
-
-  
-
-
+    <link rel="stylesheet" href="css/portfolio.css" />
   </head>
   <body>
-    <div class="main-container">
-      <div class="aside">
-        <div class="logo">
-          <a href="#"> <span>P</span>ortfolio</a>
-        </div>
-
-        <div class="nav-toggler">
-          <span></span>
-        </div>
-
-        <ul class="nav">
-          <li>
-            <a href="#home" class="active"><i class="fas fa-home"></i>Home</a>
-          </li>
-          <li>
-            <a href="#about"><i class="fas fa-user"></i>About</a>
-          </li>
-          <li>
-            <a href="#service"><i class="fas fa-list"></i>Service</a>
-          </li>
-          <li>
-            <a href="#portfolio"><i class="fas fa-briefcase"></i>Portfolio</a>
-          </li>
-          <li>
-            <a href="#contact"><i class="fas fa-comments"></i>Contact</a>
-          </li>
-        </ul>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="#home" class="brand">Fizzah <span>Mirza</span></a>
+        <nav class="nav-links">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#ai">AI</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
+    </header>
 
-      <div class="main-content">
-        <section class="home section" id="home">
-          <div class="container">
-            <div class="row">
-              <div class="home-info padd-15">
-                <h3 class="hello">
-                  Hello, My name is <span class="name">Engr. Fizzah Mukhtar Mirza</span>
-                </h3>
-                <h3 class="profession">
-                  I'm a <span class="typing"> Web developer</span>
-                </h3>
-                <p>
-                  As a web developer with a strong foundation in HTML, CSS, JavaScript, and React, 
-                  I am dedicated to crafting responsive and visually appealing web applications. 
-                  My expertise extends to .NET and WordPress, allowing me to build dynamic, user-friendly experiences that 
-                  effectively meet client needs. By blending creativity with technical skills, I strive to create engaging 
-                  web solutions that not only captivate users but also ensure optimal functionality.
-                </p>
-                <a href="#contact" class="btn hire-me">Hire Me</a>
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="reveal">
+            <div class="eyebrow"><i class="fa-solid fa-sparkles"></i> Software Engineer • Founder • AI Enthusiast</div>
+            <h1>Hello, I'm <span class="accent">Fizzah Mukhtar Mirza</span></h1>
+            <p class="subtext">
+              I build <span class="typing" id="typing-text">full-stack web applications</span> with a strong focus on ASP.NET Core, Flutter, AI-powered solutions, and scalable software systems.
+            </p>
+            <div class="hero-actions">
+              <a href="https://www.linkedin.com" target="_blank" class="btn btn-primary">Download Resume</a>
+              <a href="#contact" class="btn btn-secondary">Hire Me</a>
+              <a href="#projects" class="btn btn-secondary">View Projects</a>
+            </div>
+            <div class="hero-badges">
+              <div class="badge"><strong>3+ Years</strong>Learning & Development</div>
+              <div class="badge"><strong>50+</strong>Projects Delivered</div>
+              <div class="badge"><strong>Startup Founder</strong>SilverStreakIT</div>
+              <div class="badge"><strong>AI Driven</strong>Computer Vision & ML</div>
+            </div>
+          </div>
+
+          <div class="hero-card reveal">
+            <img class="hero-photo" src="images/me.png" alt="Fizzah Mukhtar Mirza" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="about">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>About Me</h2>
+            <p>I combine strong engineering fundamentals, startup leadership, and modern product thinking to build solutions that are practical, polished, and impactful.</p>
+          </div>
+          <div class="about-grid">
+            <div class="card about-card reveal">
+              <p>
+                I am a Software Engineer with a Master’s in Software Engineering and a deep interest in building modern applications using ASP.NET Core, Flutter, SQL Server, REST APIs, and AI.
+              </p>
+              <p>
+                My journey spans freelancing, academic software development, startup leadership, and hands-on product building. I enjoy turning complex ideas into reliable products and helping businesses move faster with thoughtful engineering.
+              </p>
+              <div class="highlights">
+                <div class="highlight-item"><i class="fa-solid fa-check"></i><span>Master’s in Software Engineering</span></div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i><span>Experienced with ASP.NET Core, Flutter, SQL Server, and REST APIs</span></div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i><span>Founder of SilverStreakIT and active freelancer</span></div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i><span>Passionate about AI, Computer Vision, and applied machine learning</span></div>
               </div>
-
-              <div class="home-img padd-15">
-                <img src="images/me.png" alt="" />
+            </div>
+            <div class="card profile-card reveal">
+              <div class="profile-list">
+                <div><strong>Email</strong>fizzahmm123@gmail.com</div>
+                <div><strong>Location</strong>Karachi, Pakistan</div>
+                <div><strong>Availability</strong>Remote • Freelance • Consulting</div>
+                <div><strong>Focus</strong>Full-Stack Development • AI • Product Engineering</div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="about section" id="about">
-          <div class="container">
-            <div class="row">
-              <div class="section-title padd-15">
-                <h2>About Me</h2>
+      <section class="section-block" id="skills">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Skills</h2>
+            <p>Core technologies and engineering capabilities I use to ship reliable digital products.</p>
+          </div>
+          <div class="skills-grid">
+            <div class="card skill-card reveal">
+              <h3>Languages</h3>
+              <div class="tag-list">
+                <span class="tag">C#</span><span class="tag">Java</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span>
               </div>
             </div>
-
-            <div class="row">
-              <div class="about-content padd-15">
-                <div class="row">
-                  <div class="about-text padd-15">
-                    <h3>
-                      I'm Engr. Fizzah Mukhtar and <span> Web Developer</span>
-                    </h3>
-                    <p>
-                      As a web developer with a strong foundation in HTML, CSS, JavaScript, and React, 
-                  I am dedicated to crafting responsive and visually appealing web applications. 
-                  My expertise extends to .NET and WordPress, allowing me to build dynamic, user-friendly experiences that 
-                  effectively meet client needs. By blending creativity with technical skills, I strive to create engaging 
-                  web solutions that not only captivate users but also ensure optimal functionality.
-
-
-                    </p>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="personal-info padd-15">
-                    <div class="row">
-                      <!-- <div class="info-item padd-15">
-                        <p>DOB : <span>20-Jan-2001</span></p>
-                      </div> -->
-
-                      
-
-                      <div class="info-item padd-15">
-                        <p>Email : <span>fizzahmm123@gmail.com</span></p>
-                      </div>
-
-                      <div class="info-item padd-15">
-                        <p>City : <span>Karachi</span></p>
-                      </div>
-
-                      
-
-                     
-
-                      <div class="info-item padd-15">
-                        <p>Freelance : <span>Available</span></p>
-                      </div>
-                      <!-- <div class="info-item padd-15">
-                        <p>Contact No : <span>+92(332 6349924)</span></p>
-                      </div> -->
-                    </div>
-
-                   
-               
-
-
-
-
-                    <div class="row">
-                      <div class="buttons padd-15">
-                        <a href="Engr. Fizzah Mukhtar Mirza.pdf" class="btn">Download CV</a>
-                        <a href="#contact" class="btn hire-me">Hire Me</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="skills padd-15">
-                    <div class="row">
-                      <div class="skill-item padd-15">
-                        <h5>HTML</h5>
-                        <div class="progress">
-                          <div class="progress-in" style="width: 95%"></div>
-                          <div class="skill-percent">95%</div>
-                        </div>
-                      </div>
-
-                      <div class="skill-item padd-15">
-                        <h5>CSS</h5>
-                        <div class="progress">
-                          <div class="progress-in" style="width: 85%"></div>
-                          <div class="skill-percent">85%</div>
-                        </div>
-                      </div>
-
-                      <div class="skill-item padd-15">
-                        <h5>JS</h5>
-                        <div class="progress">
-                          <div class="progress-in" style="width: 65%"></div>
-                          <div class="skill-percent">65%</div>
-                        </div>
-                      </div>
-
-                      <div class="skill-item padd-15">
-                        <h5>WordPress</h5>
-                        <div class="progress">
-                          <div class="progress-in" style="width: 65%"></div>
-                          <div class="skill-percent">85%</div>
-                        </div>
-                      </div>
-
-                      <div class="skill-item padd-15">
-                        <h5>React JS</h5>
-                        <div class="progress">
-                          <div class="progress-in" style="width: 75%"></div>
-                          <div class="skill-percent">75%</div>
-                        </div>
-                      </div>
-
-
-                      <div class="skill-item padd-15">
-                        <h5>.Net </h5>
-                        <div class="progress">
-                          <div class="progress-in" style="width: 65%"></div>
-                          <div class="skill-percent">65%</div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
+            <div class="card skill-card reveal">
+              <h3>Backend</h3>
+              <div class="tag-list">
+                <span class="tag">ASP.NET Core</span><span class="tag">.NET</span><span class="tag">REST APIs</span><span class="tag">Entity Framework Core</span>
+              </div>
+            </div>
+            <div class="card skill-card reveal">
+              <h3>Frontend</h3>
+              <div class="tag-list">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span><span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="card skill-card reveal">
+              <h3>Mobile & AI</h3>
+              <div class="tag-list">
+                <span class="tag">Flutter</span><span class="tag">Riverpod</span><span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">Machine Learning</span>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="services section" id="service">
-          <div class="container">
-            <div class="row">
-              <div class="section-title padd-15">
-                <h2>Services</h2>
-              </div>
+      <section class="section-block" id="experience">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Experience</h2>
+            <p>Professional experience, startup leadership, and freelance delivery across software engineering and consulting.</p>
+          </div>
+          <div class="timeline">
+            <div class="card timeline-item reveal">
+              <h3>Founder & CEO — SilverStreakIT</h3>
+              <div class="meta">2024 — Present</div>
+              <p>Leading software development projects, managing client solutions, and building scalable web and mobile applications with a strong product focus.</p>
             </div>
-
-            <div class="row">
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fas fa-desktop"></i>
-                  </div>
-                  <h4>Web Developer</h4>
-                  <p>
-                    Creating user-centric designs and interfaces for intuitive
-                    web applications.
-                  </p>
-                </div>
-              </div>
-
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fas fa-desktop"></i>
-                  </div>
-                  <h4>.Net Developer</h4>
-                  <p>Building robust applications with .NET's framework and modern development practices.</p>
-
-                </div>
-              </div>
-
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fas fa-laptop-code"></i>
-                  </div>
-                  <h4>React.Js Developer</h4>
-                  <p>
-                    Building engaging websites that deliver seamless user
-                    experiences.
-                  </p>
-                </div>
-              </div>
-
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fas fa-desktop"></i>
-                  </div>
-                  <h4>WordPress Developer</h4>
-                  <p>Crafting user-friendly websites with WordPress, leveraging its flexibility and extensive plugin.</p>
-
-                </div>
-              </div>
-
-              
+            <div class="card timeline-item reveal">
+              <h3>Freelance Software Engineer</h3>
+              <div class="meta">2022 — Present</div>
+              <p>Delivered 50+ academic and professional software projects for international and local clients, spanning Java, C#, Python, SQL, web development, and software engineering assignments.</p>
+            </div>
+            <div class="card timeline-item reveal">
+              <h3>Software Engineering Intern — LexFora</h3>
+              <div class="meta">2023 — 2024</div>
+              <p>Worked on practical development tasks and strengthened my software engineering fundamentals in a professional team environment.</p>
+            </div>
+            <div class="card timeline-item reveal">
+              <h3>Research & Development Support — CARE</h3>
+              <div class="meta">2022 — 2023</div>
+              <p>Supported practical technology and project initiatives while expanding my experience in applied software solutions.</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="portfolio section" id="portfolio">
-          <div class="container">
-            <div class="row">
-              <div class="section-title padd-15">
-                <h2>Portfolio</h2>
+      <section class="section-block" id="projects">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Featured Projects</h2>
+            <p>Selected work that reflects the quality, range, and problem-solving approach behind my engineering practice.</p>
+          </div>
+          <div class="projects-grid">
+            <div class="card project-card reveal">
+              <div class="project-top"><h3>SplitSync</h3><span>⭐ Featured</span></div>
+              <p>A modern split-based experience designed to streamline collaboration and product workflows.</p>
+              <div class="tag-list" style="margin-top:0.8rem;"><span class="tag">Flutter</span><span class="tag">ASP.NET Core</span><span class="tag">SQL Server</span></div>
+              <div class="project-links"><a class="link-pill" href="#"><i class="fa-brands fa-github"></i> GitHub</a><a class="link-pill" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a></div>
+            </div>
+            <div class="card project-card reveal">
+              <div class="project-top"><h3>School Management</h3><span>System</span></div>
+              <p>Comprehensive school operations platform built to simplify administration and student records.</p>
+              <div class="tag-list" style="margin-top:0.8rem;"><span class="tag">C#</span><span class="tag">ASP.NET</span><span class="tag">SQL</span></div>
+              <div class="project-links"><a class="link-pill" href="https://github.com/BTK-PROJECT123/BTK-SchoolProject" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div>
+            </div>
+            <div class="card project-card reveal">
+              <div class="project-top"><h3>Complaint Tracking</h3><span>Portal</span></div>
+              <p>Workflow-driven complaint management system with clear status tracking and reporting.</p>
+              <div class="tag-list" style="margin-top:0.8rem;"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQL</span></div>
+              <div class="project-links"><a class="link-pill" href="#"><i class="fa-brands fa-github"></i> GitHub</a></div>
+            </div>
+            <div class="card project-card reveal">
+              <div class="project-top"><h3>POS System</h3><span>Retail</span></div>
+              <p>Point-of-sale application tailored for efficient retail workflows and inventory handling.</p>
+              <div class="tag-list" style="margin-top:0.8rem;"><span class="tag">Java</span><span class="tag">Swing</span><span class="tag">MySQL</span></div>
+              <div class="project-links"><a class="link-pill" href="#"><i class="fa-brands fa-github"></i> GitHub</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="ai">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>AI Projects</h2>
+            <p>Applied AI work focused on vision, learning, and intelligent user experiences.</p>
+          </div>
+          <div class="ai-grid">
+            <div class="card ai-card reveal">
+              <h3>Facial Emotion Recognition</h3>
+              <p>Classification system using computer vision and deep learning to understand emotional expressions.</p>
+              <div class="tag-list" style="margin-top:0.8rem;"><span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">Python</span></div>
+            </div>
+            <div class="card ai-card reveal">
+              <h3>Handwritten Digit Recognition</h3>
+              <p>Digit classification model built for image recognition and experimentation with neural networks.</p>
+              <div class="tag-list" style="margin-top:0.8rem;"><span class="tag">TensorFlow</span><span class="tag">Machine Learning</span><span class="tag">Python</span></div>
+            </div>
+            <div class="card ai-card reveal">
+              <h3>Virtual Try-On</h3>
+              <p>Prototype for interactive AI visual experiences that blend image processing and user-facing design.</p>
+              <div class="tag-list" style="margin-top:0.8rem;"><span class="tag">Computer Vision</span><span class="tag">OpenCV</span><span class="tag">Python</span></div>
+            </div>
+            <div class="card ai-card reveal">
+              <h3>Future AI Productivity Platform</h3>
+              <p>Concept platform aimed at combining automation, intelligent workflows, and personalized productivity.</p>
+              <div class="tag-list" style="margin-top:0.8rem;"><span class="tag">AI</span><span class="tag">Product Design</span><span class="tag">Cloud</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="services">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Services</h2>
+            <p>Solutions I offer to startups, teams, and businesses looking for reliable product delivery.</p>
+          </div>
+          <div class="services-grid">
+            <div class="card service-card reveal"><h3>Web Development</h3><p>Modern responsive websites and web applications tailored to business and product goals.</p></div>
+            <div class="card service-card reveal"><h3>Mobile Apps</h3><p>Cross-platform mobile products with polished interfaces and solid architecture.</p></div>
+            <div class="card service-card reveal"><h3>REST API Development</h3><p>Secure and scalable backend services for web and mobile experiences.</p></div>
+            <div class="card service-card reveal"><h3>Database Design</h3><p>Reliable relational database planning, optimization, and integration for growing products.</p></div>
+            <div class="card service-card reveal"><h3>WordPress</h3><p>Fast, flexible WordPress solutions for content-rich business websites.</p></div>
+            <div class="card service-card reveal"><h3>AI Solutions</h3><p>Custom AI integrations and vision-based systems for modern digital products.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="achievements">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Achievements</h2>
+            <p>Milestones that reflect both technical growth and professional momentum.</p>
+          </div>
+          <div class="achievements-grid">
+            <div class="card achievement-card reveal"><strong>3.67</strong><span>Master’s CGPA</span></div>
+            <div class="card achievement-card reveal"><strong>3.26</strong><span>Bachelor’s CGPA</span></div>
+            <div class="card achievement-card reveal"><strong>50+</strong><span>Projects Delivered</span></div>
+            <div class="card achievement-card reveal"><strong>Founder</strong><span>SilverStreakIT</span></div>
+            <div class="card achievement-card reveal"><strong>Remote Ready</strong><span>Worldwide</span></div>
+            <div class="card achievement-card reveal"><strong>AI Focus</strong><span>Vision & ML</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="education">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Education</h2>
+            <p>Academic foundation that supports my engineering and research mindset.</p>
+          </div>
+          <div class="edu-grid">
+            <div class="card timeline-item reveal"><h3>Bachelor’s in Software Engineering</h3><div class="meta">Completed</div><p>Built a strong foundation in software systems, programming, and practical project development.</p></div>
+            <div class="card timeline-item reveal"><h3>Master’s in Software Engineering</h3><div class="meta">Completed</div><p>Deepened expertise in advanced software engineering topics, architecture, and applied development.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="certifications">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Certifications</h2>
+            <p>Learning milestones and professional growth across software and AI.</p>
+          </div>
+          <div class="cert-grid">
+            <div class="card cert-card reveal"><h3>Flutter</h3><p>Mobile development fundamentals and app architecture.</p></div>
+            <div class="card cert-card reveal"><h3>Artificial Intelligence</h3><p>Core AI concepts and machine learning foundations.</p></div>
+            <div class="card cert-card reveal"><h3>Programming</h3><p>Modern programming techniques and practical software design.</p></div>
+            <div class="card cert-card reveal"><h3>Future Certifications</h3><p>Continuous learning path in cloud, AI, and modern engineering practices.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="stack">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Tech Stack</h2>
+            <p>Tools and platforms I use to build modern products and digital experiences.</p>
+          </div>
+          <div class="stack-grid">
+            <div class="card stack-card reveal"><i class="fa-solid fa-mobile-screen-button"></i><h3>Flutter</h3></div>
+            <div class="card stack-card reveal"><i class="fa-solid fa-code"></i><h3>.NET</h3></div>
+            <div class="card stack-card reveal"><i class="fa-brands fa-github"></i><h3>GitHub</h3></div>
+            <div class="card stack-card reveal"><i class="fa-solid fa-database"></i><h3>SQL</h3></div>
+            <div class="card stack-card reveal"><i class="fa-solid fa-eye"></i><h3>OpenCV</h3></div>
+            <div class="card stack-card reveal"><i class="fa-solid fa-brain"></i><h3>TensorFlow</h3></div>
+            <div class="card stack-card reveal"><i class="fa-brands fa-wordpress"></i><h3>WordPress</h3></div>
+            <div class="card stack-card reveal"><i class="fa-solid fa-cloud"></i><h3>Azure</h3></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="testimonials">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Testimonials</h2>
+            <p>Feedback from collaborators, clients, and mentors who have seen the work up close.</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="card testimonial-card reveal"><p>“Fizzah brings a thoughtful engineering approach, reliable delivery, and a strong sense of ownership to every project.”</p></div>
+            <div class="card testimonial-card reveal"><p>“He combines technical depth with communication and professionalism, which is rare in fast-moving environments.”</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="contact">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Contact</h2>
+            <p>Open for remote roles, freelance partnerships, consulting, and software development opportunities.</p>
+          </div>
+          <div class="contact-grid">
+            <div class="card contact-card reveal">
+              <h3>Let’s build something valuable</h3>
+              <div class="contact-list">
+                <a href="mailto:fizzahmm123@gmail.com"><i class="fa-solid fa-envelope"></i> fizzahmm123@gmail.com</a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://wa.me/923326349924" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="#"><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</a>
               </div>
             </div>
-
-            <div class="row">
-              <div class="portfolio-heading">
-                <h2>My Latest Projects :</h2>
-              </div>
+            <div class="card contact-form reveal">
+              <form action="Submit_form.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Tell me about your project" required></textarea>
+                <button class="btn btn-primary" type="submit">Send Message</button>
+              </form>
             </div>
+          </div>
+          <div class="cta-banner reveal">
+            <div>
+              <h3>Let’s build something amazing together</h3>
+              <p>Available for remote jobs, freelance projects, consulting, software development, and AI solutions.</p>
+            </div>
+            <a href="mailto:fizzahmm123@gmail.com" class="btn btn-primary">Hire Me</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
-            <div class="row">
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner shadow-dark">
-                  <div class="portfolio-img">
-                    <img src="images/creativemedialink.PNG" alt="" />
-                    <a
-                      href="https://creativemedialink.com/"
-                      target="_blank"
-                      class="overlay"
-                      >Digital Marketing Agency</a
-                    >
-                  </div>
-                </div>
-                <a
-                  href="https://creativemedialink.com/"
-                  target="_blank"
-                  ><button class="btn">Link</button></a
-                >
-              </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Fizzah Mukhtar Mirza</p>
+        <p>Software Engineer • Founder @ SilverStreakIT</p>
+        <p>© 2026 • Built with modern web technologies</p>
+      </div>
+    </footer>
 
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner shadow-dark">
-                  <div class="portfolio-img">
-                    <img src="images/foodapp.PNG" alt="" />
-                    <a
-                      href="https://github.com/fizzah-mukhtar/Food_App/"
-                      target="_blank"
-                      class="overlay"
-                      >Food Ordering App</a
-                    >
-                  </div>
-                </div>
-                <a
-                  href="https://github.com/fizzah-mukhtar/Food_App/"
-                  target="_blank"
-                  ><button class="btn">Github Link</button></a
-                >
-              </div>
-
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner shadow-dark">
-                  <div class="portfolio-img">
-                    <img src="images/sms.PNG" alt="" />
-                    <a
-                      href="https://github.com/BTK-PROJECT123/BTK-SchoolProject"
-                      target="_blank"
-                      class="overlay"
-                      >School Management System</a
-                    >
-                  </div>
-                </div>
-                <a
-                  href="https://github.com/BTK-PROJECT123/BTK-SchoolProject"
-                  target="_blank"
-                  ><button class="btn">Github Link</button></a
-                >
-              </div>
-
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner shadow-dark">
-                  <div class="portfolio-img">
-                    <img src="images/lms.PNG" alt="" />
+    <script src="js/script.js"></script>
+  </body>
+</html>
                     <a
                       href="https://github.com/UmerRana198/SMS-LEAVEMANAGEMENTSYSTEM"
                       target="_blank"

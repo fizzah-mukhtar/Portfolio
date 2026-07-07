@@ -1,57 +1,70 @@
-var typed = new Typed(".typing", {
-    strings: ["Web Designer", "Frontend Developer", "Web Application Developer"],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const typingElement = document.getElementById('typing-text');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sections = document.querySelectorAll('main section');
+  const revealItems = document.querySelectorAll('.reveal');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.aside .nav li a');
-    const sections = document.querySelectorAll('section');
-    const navToggler = document.querySelector('.nav-toggler');
-    const aside = document.querySelector('.aside');
+  const phrases = [
+    'full-stack web applications',
+    'mobile apps with Flutter',
+    'AI solutions and intelligent products',
+    'scalable software systems'
+  ];
 
-    // Function to set active link based on the scroll position
-    function setActiveLink(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-                navLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-                });
-            }
-        });
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function typeLoop() {
+    const currentText = phrases[phraseIndex];
+    if (!typingElement) return;
+
+    typingElement.textContent = deleting
+      ? currentText.slice(0, charIndex--)
+      : currentText.slice(0, charIndex++);
+
+    if (!deleting && charIndex > currentText.length) {
+      deleting = true;
+      setTimeout(typeLoop, 1100);
+      return;
     }
 
-    // Intersection Observer setup
-    const observer = new IntersectionObserver(setActiveLink, {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.2 // Adjust this value as needed
-    });
+    if (deleting && charIndex < 0) {
+      deleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
 
-    // Observe each section
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    setTimeout(typeLoop, deleting ? 50 : 80);
+  }
 
-    // Navigation link click event
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navLinks.forEach(navLink => navLink.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
+  typeLoop();
 
-    // Toggler click event
-    navToggler.addEventListener('click', () => {
-        aside.classList.toggle('active');
-    });
-
-    // Handle screen resizing
-    window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768) {
-            aside.classList.remove('active'); // Reset aside state on large screens
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
-    });
+      });
+    },
+    { threshold: 0.16 }
+  );
+
+  revealItems.forEach(item => observer.observe(item));
+
+  const sectionObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+          });
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  sections.forEach(section => sectionObserver.observe(section));
 });
